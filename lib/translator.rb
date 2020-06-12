@@ -18,7 +18,10 @@ end
 def get_japanese_emoticon (translations, emoticon)
   library = load_library(translations)
   library.keys.find do |key|
-    binding.pry
+    #binding.pry
+    emoticon == library[key][:english]
+  end
+
     if emoticon == library[key][:english]
       #binding.pry
       value[:japanese]
