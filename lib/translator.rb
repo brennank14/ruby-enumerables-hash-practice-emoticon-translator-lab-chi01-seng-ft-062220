@@ -17,14 +17,14 @@ end
 
 def get_japanese_emoticon (translations, emoticon)
   library = load_library(translations)
-  library.keys.find do |key|
+  found_emoticon = library.keys.find do |key|
     #binding.pry
     emoticon == library[key][:english]
   end
 
-    if emoticon == library[key][:english]
+    if found_emoticon
       #binding.pry
-      value[:japanese]
+      library[found_emoticon][:japanese]
     else
       "Sorry, that emoticon was not found"
     end
