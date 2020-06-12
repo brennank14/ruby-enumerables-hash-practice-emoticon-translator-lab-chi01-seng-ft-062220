@@ -36,8 +36,9 @@ def get_english_meaning(translations, emoticon)
   end
 
   if found_emoticon
-    library[found_emoticon]
-  else
+    need = library[found_emoticon]
+    binding.pry
+   else
       "Sorry, that emoticon was not found"
   end
 
