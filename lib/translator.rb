@@ -16,7 +16,7 @@ end
 
 
 def get_japanese_emoticon (translations, emoticon)
-  load_library(translations) do |key, value|
+  load_library(translations).each do |key, value|
     if emoticon == new_hash[key][:english]
       new_hash[key][:japanese]
     else
